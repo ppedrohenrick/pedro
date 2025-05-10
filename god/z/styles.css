@@ -1,0 +1,351 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILO GERAL */
+html, body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background: #000; /* fundo preto sólido */
+    color: #e4b94f; /* texto principal dourado */
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        overscroll-behavior-x: none;
+        touch-action: pan-y;
+    }
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #e4b94f;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    text-shadow: 1px 1px 8px #000;
+}
+
+.hero .title-big {
+    font-size: 4em;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px #000;
+    letter-spacing: 2px;
+    color: #e4b94f;
+}
+
+.hero .title-small {
+    font-size: 1.6em;
+    font-style: italic;
+    border-right: .15em solid #e4b94f;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    color: #f1c75b;
+    margin-top: 10px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #f1c75b; }
+}
+
+/* CONTEÚDO DESTACADO */
+.conteudo:first-of-type {
+    color: #e4b94f;
+    padding: 40px 30px;
+    margin: 30px auto;
+    box-shadow: 0 6px 14px rgba(228, 185, 79, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+.conteudo:first-of-type h2 {
+    color: #f1c75b;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f1c75b;
+    padding-bottom: 5px;
+}
+
+.conteudo:first-of-type p {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.conteudo:first-of-type strong {
+    color: #f1c75b;
+}
+
+.conteudo p {
+    margin-bottom: 10px;
+}
+
+/* CONTAINER DESTACADO */
+.container-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #b68f3b;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(228, 185, 79, 0.2);
+    width: 95%;
+    max-width: 1080px;
+    color: #e4b94f;
+}
+
+.imagens-lado-esquerdo img {
+    max-width: 420px;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.texto-lado-direito h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #f1c75b;
+    border-bottom: 2px solid #f1c75b;
+    padding-bottom: 5px;
+}
+
+.texto-lado-direito p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* CHAMADA PARA CONEXÃO */
+.chamada-conexao {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 20px;
+    margin: 20px auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(228, 185, 79, 0.2);
+    text-align: center;
+    color: #e4b94f;
+    max-width: 900px;
+}
+
+.chamada-conexao h2 {
+    color: #f1c75b;
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.chamada-conexao p {
+    color: #e4b94f;
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+
+.botao-conectar {
+    display: inline-block;
+    background: #f1c75b;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.4s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(228, 185, 79, 0.3);
+    border: none;
+}
+
+.botao-conectar:hover {
+    background: #b68f3b;
+    box-shadow: 0 6px 14px rgba(228, 185, 79, 0.4);
+}
+
+/* GALERIA DE BÍBLIAS */
+.galeria-biblia {
+    text-align: center;
+    padding: 40px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #e4b94f;
+}
+
+.galeria-biblia h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.grid-biblia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.item-biblia {
+    width: 260px;
+    height: 260px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(228, 185, 79, 0.2);
+    border: 1px solid #f1c75b;
+}
+
+.biblia-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.texto-sobreposto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f1c75b;
+    font-size: 1.1em;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .container-destaque {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .texto-lado-direito h2 {
+        font-size: 1.8em;
+    }
+
+    .texto-lado-direito p {
+        font-size: 1.05em;
+    }
+
+    .item-biblia {
+        width: 45vw;
+        max-width: 260px;
+        height: auto;
+    }
+
+    .imagem-grande {
+        width: 80%;
+        max-width: 800px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .title-big {
+        font-size: 2.5em;
+    }
+
+    .container-destaque {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .grid-biblia {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-biblia {
+        width: 90vw;
+        max-width: 280px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .biblia-overlay img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .title-big {
+        font-size: 1.8em;
+    }
+
+    .hero .title-small {
+        font-size: 1.1em;
+    }
+
+    .conteudo:first-of-type, .chamada-conexao {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .item-biblia {
+        width: 160px;
+        height: 160px;
+    }
+
+    .texto-sobreposto {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
+.rodape-final {
+    background-color: #0d0d0d;
+    color: #e1b865;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.95em;
+    font-family: 'Georgia', serif;
+    border-top: 1px solid #444;
+    box-shadow: 0 -4px 10px rgba(255, 215, 100, 0.08);
+}
+
+.rodape-final p {
+    margin: 0;
+    text-shadow: 1px 1px 3px #000;
+}
